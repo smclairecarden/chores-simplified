@@ -44,9 +44,11 @@ class Chore(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
 
-    def __init__(self, chore, description, user_id):
+    def __init__(self, chore, description, completed_by, done, user_id):
         self.chore = chore
         self.description = description
+        self.completed_by = completed_by
+        self.done = done
         self.user_id = user_id
     
     def __repr__(self):

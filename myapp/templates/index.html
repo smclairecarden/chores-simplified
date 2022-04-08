@@ -1,7 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="jumbotron">
-        <h1>Party!</h1>
+        <h1>Chores</h1>
     </div>
-   
+    <div class="container">
+        {% for post in chores.items %}
+            <div class="card">
+                <div class="car-boy">
+                    <h2>
+                        {{post.chore}}
+                    </h2>
+                    <h3>
+                        Chore Added By: {{post.author.username}}
+                    </h3>
+                    <p>Published on: {{post.date.strftime('%Y - %m - %d')}}</p>
+                    <a class="btn btn-primary" href="{{url_for('chores.chore', chore_id=post.id)}}">Get Chore Details</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <nav aria-label="Page Navigation example">
+        <ul class="pagination justify-content-center">
+            {% for page_num in chores.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                {% if chores.page == page_num %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
+                </li>
+                {% else %}
+                <li class="page-item">
+                    <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
 {% endblock %}
