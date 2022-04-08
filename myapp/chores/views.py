@@ -19,11 +19,35 @@ def create_post():
         return redirect(url_for('core.index'))
     return render_template('create_post.html', form=form)
 
-```python
-# Make sure the blog_post_id is an integer!
-
 @chores.route('/<int:chore_id>')
 def chore(chore_id):
-    chore = BlogPost.query.get_or_404(blog_post_id) 
-    return render_template('blog_post.html', title=blog_post.title, date=blog_post.date, post=blog_post)
-```
+    chore = Chore.query.get_or_404(chore_id) 
+    return render_template('chore.html', title=chore.name, date=chore.date, post=chore)
+
+@chores.route('/<int:chore_id>/update',methods=['GET','POST'])
+@login_required
+def update(chore_id):
+    chore = Chore.query.get_or_404(chore_id)
+
+    if chore.author != current_user:
+        abort(403)
+
+    form = ChoreForm()
+
+    if form.validate_on_submit():
+        chore.name = form.name.data
+        chore.description = form.description.data
+        chore.completed_by = form.completed_by.data
+        chore.done = form.done.data
+        db.session.commit()
+        flash('Chore Updated')
+        return redirect(url_for('chore.chore',chore_id=chore.id))
+
+    elif request.method == 'GET':
+        form.title.data = chore.name
+        form.description.data = chore.description
+        form.completed_by.data = chore.completed_by
+        form.done.data = chore.done
+
+    return render_template('create_post.html',title='Updating',form=form)
+
