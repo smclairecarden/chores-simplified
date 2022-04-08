@@ -58,6 +58,7 @@ def logout():
 @login_required
 def account():
     form = UpdateUserForm()
+    chore = Chore(chore=form.chore.data, description=form.description.data, completed_by=form.completed_by.data, done=form.done.data, user_id=current_user.id)
     if form.validate_on_submit(): 
         current_user.username = form.username.data
         current_user.email = form.email.data
@@ -75,4 +76,4 @@ def user_posts(username):
     page = request.args.get('page', 1, type=int)
     user = User.query.filter_by(username=username).first_or_404()
     chores = Chore.query.filter_by(author=user).order_by(Chore.date.desc()).paginate(page=page, per_page=5) 
-    return render_template('user_blog_posts.html', chores=chores, user=user)
+    return render_template('chores.html', chores=chores, user=user)
