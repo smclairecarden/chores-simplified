@@ -4,6 +4,11 @@
 <div class="jumbotron">
     <div align="center">
         <h1>{{current_user.username}}'s Account</h1>
+        {% if current_user.chores %}
+        <h2>You have {{current_user.chores}} chores!</h2>
+        {% else %}
+        <h2>You have no chores.</h2>
+        {% endif %}
     </div>
 </div>
 
