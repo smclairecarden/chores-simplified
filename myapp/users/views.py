@@ -58,7 +58,7 @@ def logout():
 @login_required
 def account():
     form = UpdateUserForm()
-    chore = Chore(chore=form.chore.data, description=form.description.data, completed_by=form.completed_by.data, done=form.done.data, user_id=current_user.id)
+    # chore = Chore(chore=form.chore.data, description=form.description.data, completed_by=form.completed_by.data, done=form.done.data, user_id=current_user.id)
     if form.validate_on_submit(): 
         current_user.username = form.username.data
         current_user.email = form.email.data

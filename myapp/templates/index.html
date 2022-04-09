@@ -4,6 +4,7 @@
         <h1>Chores</h1>
     </div>
     <div class="container">
+        {% if current_user.is_authenticated %}
         {% for post in chores.items %}
             <div class="card">
                 <div class="car-boy">
@@ -35,4 +36,8 @@
             {% endfor %}
         </ul>
     </nav>
+    {% else %}
+    <h1>Welcome to Chores Simplified!</h1>
+    <h2>The app that helps you get things done.</h2>
+    {% endif %}
 {% endblock %}
