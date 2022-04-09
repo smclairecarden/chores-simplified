@@ -6,7 +6,7 @@ from myapp import db
 from myapp.models import User, Chore
 from myapp.users.forms import RegistrationForm, LoginForm, UpdateUserForm
 
-users = Blueprint('users', __name__) # dont forget to register this in __init__.py 
+users = Blueprint('users', __name__)
 
 
 # register
@@ -54,26 +54,27 @@ def logout():
 
 
 #account (update UserForm)
-@users.route('/account', methods=['GET', 'POST'])
+# @users.route('/account', methods=['GET', 'POST'])
+# @login_required
+# def account():
+#     form = UpdateUserForm()
+#     if form.validate_on_submit(): 
+#         current_user.username = form.username.data
+#         current_user.email = form.email.data
+#         db.session.commit()
+#         flash('User account updated!!')
+#         return redirect(url_for('users.account'))
+#     elif request.method == 'GET':
+#         form.username.data = current_user.username
+#         form.email.data = current_user.email
+
+#     return render_template('account.html', form=form)
+
+@users.route('/account')
 @login_required
-def account():
-    form = UpdateUserForm()
-    # chore = Chore(chore=form.chore.data, description=form.description.data, completed_by=form.completed_by.data, done=form.done.data, user_id=current_user.id)
-    if form.validate_on_submit(): 
-        current_user.username = form.username.data
-        current_user.email = form.email.data
-        db.session.commit()
-        flash('User account updated!!')
-        return redirect(url_for('users.account'))
-    elif request.method == 'GET':
-        form.username.data = current_user.username
-        form.email.data = current_user.email
-
-    return render_template('account.html', form=form)
-
-@users.route('/<username>')
-def user_posts(username):
+def user_posts():
+    username=current_user.username
     page = request.args.get('page', 1, type=int)
     user = User.query.filter_by(username=username).first_or_404()
-    chores = Chore.query.filter_by(author=user).order_by(Chore.date.desc()).paginate(page=page, per_page=5) 
-    return render_template('chores.html', chores=chores, user=user)
+    chores = Chore.query.filter_by(author=user).order_by(Chore.done.asc()).paginate(page=page, per_page=5) 
+    return render_template('user_chores.html', chores=chores, user=user)

@@ -14,8 +14,10 @@
                     <h3>
                         Chore Added By: {{post.author.username}}
                     </h3>
-                    <p>Published on: {{post.date.strftime('%Y - %m - %d')}}</p>
-                    <a class="btn btn-primary" href="{{url_for('chores.chore', chore_id=post.id)}}">Get Chore Details</a>
+                    <h3>
+                        Done: {{post.done}}
+                    </h3>
+                    <p>Added on: {{post.date.strftime('%Y - %m - %d')}}</p>
                 </div>
             </div>
         {% endfor %}

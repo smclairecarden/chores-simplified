@@ -41,7 +41,7 @@ def update(chore_id):
         chore.done = form.done.data
         db.session.commit()
         flash('Chore Updated')
-        return redirect(url_for('chores.chore', chore_id=chore.id))
+        return redirect(url_for('users.user_posts', chore_id=chore.id))
 
     elif request.method == 'GET':
         form.chore.data = chore.chore
@@ -62,4 +62,4 @@ def delete_post(chore_id):
     db.session.delete(chore)
     db.session.commit()
     flash('Chore Deleted')
-    return redirect(url_for('core.index'))
+    return redirect(url_for('users.user_posts'))

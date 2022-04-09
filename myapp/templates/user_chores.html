@@ -3,27 +3,28 @@
     <div class="container">
         <div class="jumbotron">
             <div align="center">
-                <h1>Welcome to the page for {{user.username}}</h1>
+                <h1>Welcome to the page for {{current_user.username}}</h1>
             </div>
         </div>
      {% for post in chores.items %}
     <h2>
-      {{post.title}}
+      {{post.chore}}
     </h2>
     <p class="text-muted">
         Published On: {{post.date.strftime("%y-%m-%d")}}
     </p>
     <br>
-    <p>{{post.text}}</p>
+    <p>{{post.description}}</p>
     <br>
+    <a class="btn btn-primary" href="{{url_for('chores.chore', chore_id=post.id)}}">Get Chore Details</a>
     {% endfor %}
     </div>
-
+    
     <nav aria-label="Page Navigation example">
         <ul class="pagination justify-content-center">
 
             {% for page_num in chores.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
-                {% if blog_posts.page == page_num %}
+                {% if chores.page == page_num %}
                 <li class="page-item disabled">
                     <a class="page-link" href="{{url_for('users.user_posts', username=user.username, page=page_num)}}">{{ page_num }}</a>
                 </li>
