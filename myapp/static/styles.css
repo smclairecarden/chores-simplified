@@ -22,10 +22,19 @@ a {
   text-decoration: none;
 }
 
-delete {
-  display: inline-block;
+.show-chore {
+  display: flex;
+  flex-flow: column;
+  margin-top: 2rem;
 }
 
-chore {
-  display: inline-block;
+.buttons {
+  display: flex;
+  margin: 1rem auto;
+  flex-wrap: nowrap;
+
+}
+
+.chore {
+  margin-right: 1rem;
 }

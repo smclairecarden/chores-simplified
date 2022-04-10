@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="jumbotron">
+<div class="show-chore">
   <h1>{{ post.chore }}</h1>
   <h2>Created by: {{post.author.username}}</h2>
   <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
@@ -8,7 +8,7 @@
   <p>Needs To Be Completed By: {{post.completed_by}}</p>
   <p>Completed: {{post.done}}</p>
    {% if post.author == current_user %}
-     <div>
+     <div class="buttons">
        <button class="chore">
        <a href="{{ url_for('chores.update', chore_id=post.id) }}">Update</a>
       </button>
