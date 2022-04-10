@@ -6,7 +6,9 @@
                 <h1>Welcome to the page for {{current_user.username}}</h1>
             </div>
         </div>
+    {% if current_user.posts %}
      {% for post in chores.items %}
+     
     <h2>
       {{post.chore}}
     </h2>
@@ -20,7 +22,13 @@
     <button>
         <a href="{{url_for('chores.chore', chore_id=post.id)}}">Get Chore Details</a>
     </button>
+
     {% endfor %}
+
+    {% else %}
+    <h3>You have no chores! Nice!</h3>
+    {% endif %}
+    
     </div>
     
     <nav aria-label="Page Navigation example">
