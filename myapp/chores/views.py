@@ -16,7 +16,7 @@ def create_post():
         db.session.commit()
         flash('Chore Created')
         print('Chore was created')
-        return redirect(url_for('core.index'))
+        return redirect(url_for('users.user_posts'))
     return render_template('create_chore.html', form=form)
 
 @chores.route('/<int:chore_id>')

@@ -11,9 +11,6 @@
 <body>
     <ul class="nav">
         <li class="nav-link">
-            <a href="{{url_for('core.index')}}">Home</a>
-        </li>
-        <li class="nav-link">
             <a href="{{url_for('core.info')}}">About</a>
         </li>
         <li class="nav-link">
@@ -27,6 +24,9 @@
             <a href="{{url_for('users.user_posts')}}">Account</a>
         </li>
         {% else %}
+        <li class="nav-link">
+            <a href="{{url_for('core.index')}}">Home</a>
+        </li>
         <li class="nav-link">
             <a href="{{url_for('users.login')}}">Log In</a>
         </li>

@@ -13,10 +13,13 @@
     <p class="text-muted">
         Published On: {{post.date.strftime("%y-%m-%d")}}
     </p>
-    <br>
-    <p>{{post.description}}</p>
-    <br>
-    <a class="btn btn-primary" href="{{url_for('chores.chore', chore_id=post.id)}}">Get Chore Details</a>
+    <p>Description: {{post.description}}</p>
+    <p>
+        Done: {{post.done}}
+    </p>
+    <button>
+        <a href="{{url_for('chores.chore', chore_id=post.id)}}">Get Chore Details</a>
+    </button>
     {% endfor %}
     </div>
     
