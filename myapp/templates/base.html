@@ -6,32 +6,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
     <title>Chores Simplified</title>
 </head>
 <body>
     <ul class="nav">
         <li class="nav-link">
-            <a href="{{url_for('core.info')}}">About</a>
+            <a class="navtext" href="{{url_for('core.info')}}">About</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('chores.create_post')}}">Add A Chore</a> 
+            <a class="navtext" href="{{url_for('chores.create_post')}}">Add A Chore</a> 
         </li>
         {% if current_user.is_authenticated %}
         <li class="nav-link">
-            <a href="{{url_for('users.logout')}}">Log Out</a>
+            <a class="navtext" href="{{url_for('users.logout')}}">Log Out</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('users.user_posts')}}">Account</a>
+            <a class="navtext" href="{{url_for('users.user_posts')}}">Account</a>
         </li>
         {% else %}
         <li class="nav-link">
-            <a href="{{url_for('core.index')}}">Home</a>
+            <a class="navtext" href="{{url_for('core.index')}}">Home</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('users.login')}}">Log In</a>
+            <a class="navtext" href="{{url_for('users.login')}}">Log In</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('users.register')}}">Register</a>
+            <a class="navtext" href="{{url_for('users.register')}}">Register</a>
         </li>
         {% endif %}
     </ul>

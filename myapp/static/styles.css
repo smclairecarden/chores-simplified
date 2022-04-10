@@ -1,0 +1,31 @@
+body{
+  display: grid;
+  text-align: center;
+}
+
+.nav {
+  background-color: lightgreen;
+  color: white;
+  height: 4rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navtext {
+  color: slateblue;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+delete {
+  display: inline-block;
+}
+
+chore {
+  display: inline-block;
+}
