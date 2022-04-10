@@ -38,3 +38,18 @@ a {
 .chore {
   margin-right: 1rem;
 }
+
+.allchorespage {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.all-chores {
+  display: flex;
+  flex-direction: column;
+  border: .25rem solid black;
+  margin: 10px;
+  width: 15rem;
+}

@@ -1,18 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container">
-        <div class="jumbotron">
-            <div align="center">
-                <h1>Welcome to the page for {{current_user.username}}</h1>
-            </div>
-        </div>
+    <div>
+                <h1>Welcome to the page for {{current_user.username}}</h1><br>
+    <div class="allchorespage">
     {% if current_user.posts %}
      {% for post in chores.items %}
-     
+    <div class="all-chores">
     <h2>
       {{post.chore}}
-    </h2>
-    <p class="text-muted">
+    </h2><br>
+    <p>
         Published On: {{post.date.strftime("%y-%m-%d")}}
     </p>
     <p>Description: {{post.description}}</p>
@@ -22,13 +19,13 @@
     <button>
         <a href="{{url_for('chores.chore', chore_id=post.id)}}">Get Chore Details</a>
     </button>
-
+    </div>
     {% endfor %}
 
     {% else %}
     <h3>You have no chores! Nice!</h3>
     {% endif %}
-    
+    </div>
     </div>
     
     <nav aria-label="Page Navigation example">
