@@ -5,14 +5,14 @@
     <h1>Log In:</h1>
     <form class="loginform" method="POST">
         {{form.hidden_tag()}}
-        {{form.email.label}}:{{form.email}}<br>
-        {{form.password.label}}:{{form.password}}<br>
+        {{form.email.label}}{{form.email}}<br>
+        {{form.password.label}}{{form.password}}<br>
         <div class="loginbutton">
             {{form.submit()}}
         </div>
     </form>
 </div>
-<img class="brooms" src="../static/brooms-vector-cartoon_7kLf6b_SB_PM.svg" alt="dancing broom">
+<img class="brooms" src="../static/brooms-vector-cartoon_7kLf6b_SB_PM.jpg" alt="dancing broom">
 {% endblock %}
 
 

@@ -1,44 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="jumbotron">
-    </div>
-    <div class="container">
-        {% if current_user.is_authenticated %}
-        {% for post in chores.items %}
-            <div class="card">
-                <div class="car-boy">
-                    <h2>
-                        {{post.chore}}
-                    </h2>
-                    <h3>
-                        Chore Added By: {{post.author.username}}
-                    </h3>
-                    <h3>
-                        Done: {{post.done}}
-                    </h3>
-                    <p>Added on: {{post.date.strftime('%Y - %m - %d')}}</p>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-
-    <nav aria-label="Page Navigation example">
-        <ul class="pagination justify-content-center">
-            {% for page_num in chores.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
-                {% if chores.page == page_num %}
-                <li class="page-item disabled">
-                    <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
-                </li>
-                {% else %}
-                <li class="page-item">
-                    <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
-                </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </nav>
-    {% else %}
     <h1>Welcome to Chores Simplified!</h1>
     <h2>The app that helps you get things done.</h2>
-    {% endif %}
+    <button><a class="navtext" href="{{url_for('users.login')}}">Log In</a></button>
+    <button><a class="navtext" href="{{url_for('users.register')}}">Register</a></button><br>
+    <img class="homeimage" src="../static/AibjGkXbT.gif" alt="">
 {% endblock %}

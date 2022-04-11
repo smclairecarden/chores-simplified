@@ -74,7 +74,12 @@ a {
   color: whitesmoke;
 }
 
-.brooms {
+.brooms, .homeimage {
   height: 25%;
+}
+
+.registerform > * {
+  margin: .5%;
+  padding: 1%;
 }
 
