@@ -49,7 +49,10 @@ a {
 .all-chores {
   display: flex;
   flex-direction: column;
-  border: .25rem solid black;
+  background-color: #E8E8E8;
+  box-shadow: 5px 10px 15px;
   margin: 10px;
-  width: 15rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
 }
