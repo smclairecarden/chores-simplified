@@ -58,18 +58,18 @@ a {
   flex-basis: 0;
 }
 
-.loginpage, .homepage, .registerform {
+.loginpage, .homepage, .registerform, .addchoreform {
   margin: 2%;
   border: .2rem solid hotpink;
   padding: 1%;
 }
 
-.loginform > *, .registerform > * {
+.loginform > *, .registerform > *, .addchoreinput > * {
   margin: .5%;
   padding: 1%;
 }
 
-.loginbutton > *, .registerbutton > * {
+.loginbutton > *, .registerbutton > *, .addchorebutton > * {
   background-color: slateblue;
   color: whitesmoke;
 }
@@ -88,4 +88,13 @@ a {
 
 .homeimage {
   height: 40%;
+}
+
+.addchoreinput {
+  text-align: center;
+}
+
+.addchore > {
+  width: 4rem;
+  text-align: center;
 }
