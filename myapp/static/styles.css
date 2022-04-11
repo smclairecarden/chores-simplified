@@ -58,7 +58,7 @@ a {
   flex-basis: 0;
 }
 
-.loginpage {
+.loginpage, .homepage {
   margin: 2%;
   border: .2rem solid hotpink;
   padding: 1%;
@@ -74,7 +74,15 @@ a {
   color: whitesmoke;
 }
 
-.brooms, .homeimage {
+.homebutton {
+  background-color: slateblue;
+}
+
+.homebutton > * {
+  color: whitesmoke;
+}
+
+.brooms {
   height: 25%;
 }
 
@@ -83,3 +91,6 @@ a {
   padding: 1%;
 }
 
+.homeimage {
+  height: 40%;
+}
