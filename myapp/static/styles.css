@@ -69,3 +69,12 @@ a {
   padding: 1%;
 }
 
+.loginbutton > * {
+  background-color: slateblue;
+  color: whitesmoke;
+}
+
+.brooms {
+  height: 25%;
+}
+

@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 {% block content %}
 <div class="loginpage">
@@ -6,11 +7,12 @@
         {{form.hidden_tag()}}
         {{form.email.label}}:{{form.email}}<br>
         {{form.password.label}}:{{form.password}}<br>
-        {{form.submit()}}
-    
+        <div class="loginbutton">
+            {{form.submit()}}
+        </div>
     </form>
-    
 </div>
+<img class="brooms" src="../static/brooms-vector-cartoon_7kLf6b_SB_PM.svg" alt="dancing broom">
 {% endblock %}
 
 
