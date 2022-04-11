@@ -17,7 +17,7 @@ def create_post():
         flash('Chore Created')
         print('Chore was created')
         return redirect(url_for('users.user_posts'))
-    return render_template('create_chore.html', form=form)
+    return render_template('create_chore.html', title='Add A Chore', form=form)
 
 @chores.route('/<int:chore_id>')
 def chore(chore_id):
@@ -49,7 +49,7 @@ def update(chore_id):
         form.completed_by.data = chore.completed_by
         form.done.data = chore.done
 
-    return render_template('create_chore.html',title='Updating',form=form)
+    return render_template('create_chore.html',title='Update Chore',form=form)
 
 @chores.route('/<int:chore_id>/delete',methods=['GET','POST'])
 @login_required
