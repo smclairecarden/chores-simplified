@@ -58,18 +58,18 @@ a {
   flex-basis: 0;
 }
 
-.loginpage, .homepage {
+.loginpage, .homepage, .registerform {
   margin: 2%;
   border: .2rem solid hotpink;
   padding: 1%;
 }
 
-.loginform > * {
+.loginform > *, .registerform > * {
   margin: .5%;
   padding: 1%;
 }
 
-.loginbutton > * {
+.loginbutton > *, .registerbutton > * {
   background-color: slateblue;
   color: whitesmoke;
 }
@@ -84,11 +84,6 @@ a {
 
 .brooms {
   height: 25%;
-}
-
-.registerform > * {
-  margin: .5%;
-  padding: 1%;
 }
 
 .homeimage {
