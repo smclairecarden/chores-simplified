@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<body>
+<div class="loginpage">
     <h1>Log In:</h1>
-    <form method="POST">
+    <form class="loginform" method="POST">
         {{form.hidden_tag()}}
-        {{form.email.label}}{{form.email}}<br>
-        {{form.password.label}}{{form.password}}<br>
+        {{form.email.label}}:{{form.email}}<br>
+        {{form.password.label}}:{{form.password}}<br>
         {{form.submit()}}
     
     </form>
     
-</body>
+</div>
 {% endblock %}
 
 
