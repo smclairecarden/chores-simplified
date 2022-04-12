@@ -10,7 +10,7 @@
         <a href="{{url_for('chores.chore', chore_id=post.id)}}">Get Chore Details</a>
     </button>
     <h3 class="choretitle">{{post.chore}}</h3>
-    <p>Published On: {{post.date.strftime("%y-%m-%d")}}</p>
+    <p>Added on: {{post.date.strftime("%y-%m-%d")}}</p>
     <p>Description: {{post.description}}</p>
     {% if post.done==True %}
     <p>Done: Yes</p>
@@ -21,7 +21,7 @@
     {% endfor %}
 
     {% else %}
-    <h3>You have no chores! Nice!</h3>
+    <h3>You have no chores. Nice!</h3>
     {% endif %}
     </div>
     </div>

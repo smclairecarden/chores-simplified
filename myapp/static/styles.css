@@ -69,7 +69,7 @@ a {
   font-weight: bold;
 }
 
-.loginpage, .registerform, .addchoreform {
+.loginpage, .registerform, .addchoreform, .show-chore, .about {
   margin: 2%;
   border: .2rem solid #007397;
   padding: 1%;
@@ -80,7 +80,7 @@ a {
   padding: 1%;
 }
 
-.loginbutton > *, .registerbutton > *, .addchorebutton > *, .choredetails {
+.loginbutton > *, .registerbutton > *, .addchorebutton > *, .choredetails, .chore, .delete {
   background-color: #E33441;
   color: whitesmoke;
 }
@@ -89,7 +89,7 @@ a {
   background-color: #E33441;
 }
 
-.homebutton > *, .choredetails > * {
+.homebutton > *, .choredetails > *, .chore > * {
   color: whitesmoke;
 }
 
@@ -101,7 +101,6 @@ a {
 .brooms, .addchoreimg {
   height: 25%;
 }
-
 /* .homeimage {
   height: 30%;
 } */
@@ -130,6 +129,8 @@ a {
   width: 4rem;
   text-align: center;
 }
+
+
 
 @media only screen and (max-width: 768px) {
   .allhomepage {

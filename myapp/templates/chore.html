@@ -2,8 +2,7 @@
 {% block content %}
 <div class="show-chore">
   <h1>{{ post.chore }}</h1>
-  <h2>Created by: {{post.author.username}}</h2>
-  <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
+  <p>Added on: {{ post.date.strftime('%B %d, %Y') }}</p>
   <p>Description: {{post.description}}</p>
   <p>Needs To Be Completed By: {{post.completed_by}}</p>
   {% if post.done==True %}
