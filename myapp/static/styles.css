@@ -2,6 +2,7 @@ body{
   display: grid;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+  color: #5ba9ba;
 }
 
 .nav {
@@ -13,7 +14,7 @@ body{
 }
 
 .navtext {
-  color: slateblue;
+  color: #E33441;
   font-weight: bold;
   text-align: center;
 }
@@ -65,9 +66,9 @@ a {
   font-weight: bold;
 }
 
-.loginpage, .homepage, .registerform, .addchoreform {
+.loginpage, .registerform, .addchoreform {
   margin: 2%;
-  border: .2rem solid hotpink;
+  border: .2rem solid #007397;
   padding: 1%;
 }
 
@@ -77,12 +78,12 @@ a {
 }
 
 .loginbutton > *, .registerbutton > *, .addchorebutton > *, .choredetails {
-  background-color: slateblue;
+  background-color: #E33441;
   color: whitesmoke;
 }
 
 .homebutton {
-  background-color: slateblue;
+  background-color: #E33441;
 }
 
 .homebutton > *, .choredetails > * {
@@ -98,8 +99,24 @@ a {
   height: 25%;
 }
 
+/* .homeimage {
+  height: 30%;
+} */
+
+.allhomepage {
+  display: flex;
+  height: 60%;
+  justify-content: center;
+  color: #5ba9ba;
+
+}
+
+.homepage {
+  margin-top: 20%;
+}
+
 .homeimage {
-  height: 50%;
+  margin-top: 10%;
 }
 
 .addchoreinput {
@@ -109,4 +126,20 @@ a {
 .addchore > {
   width: 4rem;
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .allhomepage {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: small;
+  }
+
+  .nav {
+    font-size: small;
+  }
+
 }

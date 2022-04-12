@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
+    <div class="allhomepage">
+    <img class="homeimage" src="../static/AibjGkXbT.gif" alt="">    
     <div class="homepage">
     <h1>Welcome to Chores Simplified!</h1>
     <h3>The app that helps you get things done.</h3>
     <button class="homebutton"><a class="navtext" href="{{url_for('users.login')}}">Log In</a></button>
     <button class="homebutton"><a class="navtext" href="{{url_for('users.register')}}">Register</a></button><br>
     </div>
-    <img class="homeimage" src="../static/AibjGkXbT.gif" alt="">
+    </div>
 
 {% endblock %}
