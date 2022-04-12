@@ -12,7 +12,11 @@
     <h3 class="choretitle">{{post.chore}}</h3>
     <p>Published On: {{post.date.strftime("%y-%m-%d")}}</p>
     <p>Description: {{post.description}}</p>
-    <p>Done: {{post.done}}</p>
+    {% if post.done==True %}
+    <p>Done: Yes</p>
+    {% else %}
+    <p>Done: No</p>
+    {% endif %}
     </div>
     {% endfor %}
 
