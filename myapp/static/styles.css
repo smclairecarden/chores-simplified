@@ -52,10 +52,17 @@ a {
   flex-direction: column;
   background-color: #E8E8E8;
   box-shadow: 5px 10px 15px;
-  margin: 10px;
-  flex-grow: 1;
+  margin: 1%;
+  width: 20%;
+  height: 20%;
+  /* flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 0;
+  flex-basis: 0; */
+}
+
+.choretitle {
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .loginpage, .homepage, .registerform, .addchoreform {
@@ -69,7 +76,7 @@ a {
   padding: 1%;
 }
 
-.loginbutton > *, .registerbutton > *, .addchorebutton > * {
+.loginbutton > *, .registerbutton > *, .addchorebutton > *, .choredetails {
   background-color: slateblue;
   color: whitesmoke;
 }
@@ -78,16 +85,21 @@ a {
   background-color: slateblue;
 }
 
-.homebutton > * {
+.homebutton > *, .choredetails > * {
   color: whitesmoke;
 }
 
-.brooms {
+.choredetails {
+  justify-content: center;
+  position: relative;
+}
+
+.brooms, .addchoreimg {
   height: 25%;
 }
 
 .homeimage {
-  height: 40%;
+  height: 50%;
 }
 
 .addchoreinput {
