@@ -6,7 +6,11 @@
   <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
   <p>Description: {{post.description}}</p>
   <p>Needs To Be Completed By: {{post.completed_by}}</p>
-  <p>Completed: {{post.done}}</p>
+  {% if post.done==True %}
+  <p>Done: Yes</p>
+  {% else %}
+  <p>Done: No</p>
+  {% endif %}
    {% if post.author == current_user %}
      <div class="buttons">
        <button class="chore">
