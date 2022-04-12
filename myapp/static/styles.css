@@ -130,7 +130,10 @@ a {
   text-align: center;
 }
 
-
+.registerform {
+  display: flex;
+  justify-content: center;
+}
 
 @media only screen and (max-width: 768px) {
   .allhomepage {
@@ -140,6 +143,10 @@ a {
     margin-left: 20%;
     margin-right: 20%;
     font-size: small;
+  }
+
+  .registerform {
+    flex-direction: column;
   }
 
   .nav {
