@@ -166,6 +166,7 @@ a {
 
   .nav {
     font-size: small;
+    justify-content: center;
   }
 
 }
