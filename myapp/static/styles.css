@@ -143,22 +143,16 @@ a {
     font-size: small;
   }
 
-  .homeimage {
-    max-width: 50%;
-    min-height: 50%;
-    margin: 0 auto;
-  }
-
   .homepage {
     margin-top: 1%;
   }
 
-  .registerform, .loginpage, .addchoreform {
+  .registerform, .loginpage, .addchoreform, .about {
     flex-direction: column;
     margin: 2% auto;
   }
 
-  .registerimg {
+  .registerimg, .homeimage, .brooms, .addchoreimg {
     max-width: 50%;
     min-height: 50%;
     margin: 0 auto;
