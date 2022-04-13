@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <div>
-                <h1>{{current_user.username}}'s Chores</h1><br>
+                <h1>My Chores</h1><br>
     <div class="allchorespage">
     {% if current_user.posts %}
      {% for post in chores.items %}
