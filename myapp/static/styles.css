@@ -153,9 +153,9 @@ a {
     margin-top: 1%;
   }
 
-  .registerform {
+  .registerform, .loginpage, .addchoreform {
     flex-direction: column;
-    margin: 0 auto;
+    margin: 2% auto;
   }
 
   .registerimg {
