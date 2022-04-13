@@ -152,9 +152,15 @@ a {
     margin: 2% auto;
   }
 
-  .registerimg, .homeimage, .brooms, .addchoreimg {
+  .registerimg, .homeimage {
     max-width: 50%;
     min-height: 50%;
+    margin: 0 auto;
+  }
+
+  .brooms, .addchoreimg {
+    max-width: 30%;
+    min-height: 30%;
     margin: 0 auto;
   }
 
