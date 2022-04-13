@@ -8,8 +8,6 @@ from myapp.users.forms import RegistrationForm, LoginForm, UpdateUserForm
 
 users = Blueprint('users', __name__)
 
-
-# register
 @users.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
@@ -23,7 +21,6 @@ def register():
     
     return render_template('register.html', form=form)
 
-# login
 @users.route('/login', methods=['GET', 'POST'])
 def login():
 
@@ -46,29 +43,10 @@ def login():
 
     return render_template('login.html',form=form)
 
-# logout
 @users.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('core.index')) #once the user has logged out we will redirect them back home
-
-
-#account (update UserForm)
-# @users.route('/account', methods=['GET', 'POST'])
-# @login_required
-# def account():
-#     form = UpdateUserForm()
-#     if form.validate_on_submit(): 
-#         current_user.username = form.username.data
-#         current_user.email = form.email.data
-#         db.session.commit()
-#         flash('User account updated!!')
-#         return redirect(url_for('users.account'))
-#     elif request.method == 'GET':
-#         form.username.data = current_user.username
-#         form.email.data = current_user.email
-
-#     return render_template('account.html', form=form)
+    return redirect(url_for('core.index'))
 
 @users.route('/account')
 @login_required

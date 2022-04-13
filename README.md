@@ -15,6 +15,7 @@
 
 ## What the App Looks Like
 ![Homepage](/myapp/static/Homepage.png)
+![AccountPage](myapp/static/Account%20Page.png)
 
 ## Technologies Used
 - Python
