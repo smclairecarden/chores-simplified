@@ -139,14 +139,29 @@ a {
   .allhomepage {
     flex-direction: column;
     justify-content: center;
-    margin-top: 40%;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-top: 20%;
     font-size: small;
+  }
+
+  .homeimage {
+    max-width: 50%;
+    min-height: 50%;
+    margin: 0 auto;
+  }
+
+  .homepage {
+    margin-top: 1%;
   }
 
   .registerform {
     flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .registerimg {
+    max-width: 50%;
+    min-height: 50%;
+    margin: 0 auto;
   }
 
   .nav {
