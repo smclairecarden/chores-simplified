@@ -85,6 +85,10 @@ a {
   color: whitesmoke;
 }
 
+.loginbutton > *:hover, .registerbutton > *:hover, .addchorebutton > *:hover, .choredetails:hover, .chore:hover, .delete:hover {
+  color: whitesmoke;
+}
+
 .homebutton {
   background-color: #E33441;
 }
