@@ -85,7 +85,7 @@ a {
   color: whitesmoke;
 }
 
-button:hover {
+button > *:hover {
   color: whitesmoke;
 }
 
