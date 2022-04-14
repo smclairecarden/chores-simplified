@@ -85,7 +85,7 @@ a {
   color: whitesmoke;
 }
 
-.loginbutton > *:hover, .registerbutton > *:hover, .addchorebutton > *:hover, .choredetails:hover, .chore:hover, .delete:hover {
+button:hover {
   color: whitesmoke;
 }
 
