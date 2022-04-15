@@ -22,7 +22,6 @@
 - HTML
 - CSS
 - Jinja
-- Anaconda
 - Flask
 - PostgreSQL
 - Bootstrap
